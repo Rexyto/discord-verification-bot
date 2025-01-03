@@ -1,0 +1,16 @@
+{
+  "token": "TU_TOKEN_BOT",
+  "clientId": "ID_BOT",
+  "guildId": "ID_SERVIDOR",
+  "roles": {
+    "initial": "ID_ROL_INICIAL",
+    "verified": "ID_ROL_VERIFICADO",
+    "admin": "ID_ROL_ADMIN"
+  },
+  "database": {
+    "host": "localhost",
+    "user": "tu_usuario",
+    "password": "tu_contraseña",
+    "database": "discord_bot"
+  }
+}
