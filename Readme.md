@@ -9,17 +9,11 @@
 [![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![Stars](https://img.shields.io/github/stars/Rexyto/discord-verification-bot?style=for-the-badge&color=yellow)](https://github.com/Rexyto/discord-verification-bot/stargazers)
 
----
-
 ### 🌟 Un bot moderno y elegante para la gestión de verificación en tu servidor de Discord
 
 </div>
 
 ## 📋 Características Principales
-
-<table>
-<tr>
-<td>
 
 ### ✨ Sistema de Verificación
 - Botones interactivos y persistentes
@@ -27,19 +21,11 @@
 - Mensajes personalizados
 - Sistema anti-spam integrado
 
-</td>
-<td>
-
 ### 📊 Base de Datos
 - Registro completo de usuarios
 - Almacenamiento seguro
 - Backups automáticos
 - Consultas optimizadas
-
-</td>
-</tr>
-<tr>
-<td>
 
 ### 🛡️ Seguridad
 - Roles automáticos
@@ -47,46 +33,38 @@
 - Protección administrativa
 - Logs detallados
 
-</td>
-<td>
-
 ### ⚡ Rendimiento
 - Respuestas instantáneas
 - Bajo consumo de recursos
 - Alta disponibilidad
 - Código optimizado
 
-</td>
-</tr>
-</table>
-
 ## 🚀 Guía de Instalación
 
 ### Requisitos Previos
 
-| Requisito | Versión | Descripción |
-|-----------|---------|-------------|
-| Node.js | v16.9.0+ | Entorno de ejecución |
-| MySQL | 5.7+ | Base de datos |
-| Discord Bot | - | Token y permisos |
+- Node.js v16.9.0+
+- MySQL 5.7+
+- Token de Bot de Discord
+- Permisos de administrador en el servidor
 
 ### Pasos de Instalación
 
-1️⃣ **Clonar el Repositorio**
-\`\`\`bash
+1. **Clonar el Repositorio**
+```bash
 git clone https://github.com/Rexyto/discord-verification-bot.git
 cd discord-verification-bot
-\`\`\`
+```
 
-2️⃣ **Instalar Dependencias**
-\`\`\`bash
+2. **Instalar Dependencias**
+```bash
 npm install
-\`\`\`
+```
 
-3️⃣ **Configurar el Bot**
-> Crea y configura el archivo \`config.json\`:
+3. **Configurar el Bot**
+Crea y configura el archivo `config.json`:
 
-\`\`\`json
+```json
 {
   "token": "TU_TOKEN_BOT",
   "clientId": "ID_BOT",
@@ -103,39 +81,32 @@ npm install
     "database": "discord_bot"
   }
 }
-\`\`\`
+```
 
-4️⃣ **Iniciar el Bot**
-\`\`\`bash
+4. **Iniciar el Bot**
+```bash
 node .
-\`\`\`
+```
 
 ## 🎮 Comandos Disponibles
 
-### Comando de Verificación
-\`\`\`
+### Verificación
+```
 /verificacion [canal]
-\`\`\`
-> 🔹 Configura el sistema de verificación en el canal especificado
-> 
-> 🔸 Requiere: Rol de Administrador
-> 
-> 📝 Ejemplo: \`/verificacion #verificacion\`
+```
+- Configura el sistema de verificación en el canal especificado
+- Requiere: Rol de Administrador
+- Ejemplo: `/verificacion #verificacion`
 
-### Comando de Logs
-\`\`\`
+### Logs
+```
 /logs
-\`\`\`
-> 🔹 Muestra un registro detallado de usuarios
-> 
-> 🔸 Requiere: Rol de Administrador
-> 
-> 📊 Incluye: ID, username y fecha de ingreso
+```
+- Muestra un registro detallado de usuarios
+- Requiere: Rol de Administrador
+- Incluye: ID, username y fecha de ingreso
 
 ## ⚙️ Permisos Necesarios
-
-<details>
-<summary>📋 Lista Completa de Permisos</summary>
 
 | Permiso | Descripción | Importancia |
 |---------|-------------|-------------|
@@ -146,102 +117,69 @@ node .
 | USE_EXTERNAL_EMOJIS | Uso de emojis | Opcional |
 | ADD_REACTIONS | Añadir reacciones | Opcional |
 
-</details>
-
 ## 🔧 Solución de Problemas
 
-<details>
-<summary>❌ Error: Missing Permissions</summary>
+### Error: Missing Permissions
 
-### Problema
-El bot no puede asignar roles a los usuarios.
+**Problema:** El bot no puede asignar roles a los usuarios.
 
-### Soluciones
-1. ✅ Verifica los permisos del bot
-2. ✅ Revisa la jerarquía de roles
-3. ✅ Confirma los permisos del servidor
+**Solución:**
+1. Verifica los permisos del bot
+2. Revisa la jerarquía de roles
+3. Confirma los permisos del servidor
 
-### Pasos Detallados
+**Pasos:**
 1. Ve a Configuración del Servidor > Roles
 2. Asegúrate que el rol del bot está por encima de los roles que maneja
 3. Verifica que el bot tiene el permiso MANAGE_ROLES
-</details>
 
-<details>
-<summary>❌ Error: Cannot find module 'discord.js'</summary>
+### Error: Cannot find module 'discord.js'
 
-### Problema
-Dependencias no instaladas correctamente.
+**Problema:** Dependencias no instaladas correctamente.
 
-### Solución
-1. Elimina la carpeta \`node_modules\`
-2. Elimina el archivo \`package-lock.json\`
-3. Ejecuta \`npm install\`
-</details>
+**Solución:**
+1. Elimina la carpeta `node_modules`
+2. Elimina el archivo `package-lock.json`
+3. Ejecuta `npm install`
 
-<details>
-<summary>❌ Error: Cannot connect to MySQL</summary>
+### Error: Cannot connect to MySQL
 
-### Problema
-No se puede establecer conexión con la base de datos.
+**Problema:** No se puede establecer conexión con la base de datos.
 
-### Verificación
-1. Estado del servidor MySQL
-2. Credenciales correctas
-3. Existencia de la base de datos
-
-### Comandos Útiles
-\`\`\`bash
+**Verificación:**
+```bash
 sudo service mysql status
 mysql -u root -p
 CREATE DATABASE discord_bot;
-\`\`\`
-</details>
+```
 
 ## 📝 Notas Importantes
 
-> ⚠️ **Jerarquía de Roles**
-> - El rol del bot DEBE estar por encima de los roles que gestiona
-> - Revisa la configuración de roles regularmente
+### Jerarquía de Roles
+- El rol del bot DEBE estar por encima de los roles que gestiona
+- Revisa la configuración de roles regularmente
 
-> 💾 **Base de Datos**
-> - Se inicializa automáticamente
-> - Realiza backups periódicos
-> - Mantén las credenciales seguras
+### Base de Datos
+- Se inicializa automáticamente
+- Realiza backups periódicos
+- Mantén las credenciales seguras
 
-> 🔄 **Persistencia**
-> - Los botones de verificación son persistentes
-> - Se restauran automáticamente tras reinicios
-> - No requiere configuración adicional
+### Persistencia
+- Los botones de verificación son persistentes
+- Se restauran automáticamente tras reinicios
+- No requiere configuración adicional
 
 ## 🤝 Contribuciones
 
-¿Quieres contribuir al proyecto? ¡Fantástico! Sigue estos pasos:
-
-1. 🍴 Fork del repositorio
-2. 🌿 Crea tu rama (\`git checkout -b feature/NuevaCaracteristica\`)
-3. 💾 Commit de cambios (\`git commit -m 'Añade nueva característica'\`)
-4. 📤 Push a la rama (\`git push origin feature/NuevaCaracteristica\`)
-5. 🔄 Abre un Pull Request
+1. Fork del repositorio
+2. Crea tu rama (`git checkout -b feature/NuevaCaracteristica`)
+3. Commit de cambios (`git commit -m 'Añade nueva característica'`)
+4. Push a la rama (`git push origin feature/NuevaCaracteristica`)
+5. Abre un Pull Request
 
 ## 📞 Soporte y Ayuda
 
-<table>
-<tr>
-<td>
-<img src="https://discord.com/assets/3437c10597c1526c3dbd98c737c2bcae.svg" width="50">
-
-**Discord**
-Únete a nuestro [servidor de soporte](https://discord.gg/tuservidor)
-</td>
-<td>
-<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="50">
-
-**GitHub**
-Abre un [issue](https://github.com/Rexyto/discord-verification-bot/issues)
-</td>
-</tr>
-</table>
+- **GitHub Issues:** [Reportar un problema](https://github.com/Rexyto/discord-verification-bot/issues)
 
 ---
 
